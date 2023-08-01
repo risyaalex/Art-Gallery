@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #eeeeee;
+}
+
+header {
+    background-color: #000;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    padding: 2rem;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem;
+}
+
+.gallery .hidden {
+    display: none;
+}
+
+.photo-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 1.5rem;
+    max-width: 350px;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.photo-card .title {
+    color: rgb(117, 21, 190);
+}
+
+.photo-card .description {
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.photo-card .image {
+    max-width: 300px;
+    max-height: 400px;
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    transition: transform 0.8s ease;
+}
+
+.photo-card .image:hover {
+    transform: scale(1.05);
+}
+
+.photo-card .date {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(209, 72, 72);
+    margin-top: 1rem;
+    align-self: flex-end;
+}
+
+/* Footer */
+
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    color: white;
+}
+
+.top-button {
+    text-align: left;
+    margin: 10px 0 10px 30px;
+}
+
+.top {
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+
+}
+
+.top:hover {
+    background-color: #9e9e9e;
+}
+
+.top:active {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Pad */
+
+@media only screen and (max-width: 850px) {
+
+    .gallery {
+        margin: 1rem;
+    }
+
+    .photo-card {
+        border: 1px solid black;
+        padding: 1.5rem;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .photo-card .image {
+        max-width: 250px;
+        max-height: 300px;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 600px) {
+
+    .gallery {
+        margin: 1rem;
+    }
+
+    .photo-card {
+        border: 1px solid black;
+        padding: 1.5rem;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .photo-card .image {
+        max-width: 70%;
+        max-height: 70%;
+    }
+
+    .top-button {
+        text-align: left;
+        margin: 10px 0 30px 20px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
